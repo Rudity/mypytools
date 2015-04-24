@@ -5,6 +5,7 @@
 #3C3C3C - widget color
 #7C7C7C - hover color
 #505050 - border color/select
+#7C7C7C - scroll color
 #969696 - scroll hover
 #C5C5C5 - scroll select
 #B1B1B1 - text color
@@ -60,7 +61,7 @@ QAbstractSpinBox::up-arrow
 
 QSpinBox::up-arrow
 {
-    background-image: url("C:/Users/User/Google Drive/python27/mypytools/python/cell_compare/core/gui/themes/down_arrow.png");
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_vertical_down_arrow.png");
     width: 3px;
     height: 3px;
 }
@@ -278,7 +279,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
 QScrollBar:vertical
 {
     background: #323232;
-    width: 16px;
+    width: 18px;
     margin: 16px 0 16px 0;
         /*
       background: #7C7C7C;
@@ -290,7 +291,7 @@ QScrollBar:vertical
 QScrollBar::handle:vertical
 {
     background: #7C7C7C;
-    margin: 0px 4px 0px 4px
+    margin: 0px 5px 0px 4px
 }
 
 QScrollBar::handle:vertical:hover
@@ -332,9 +333,9 @@ QScrollBar::up-arrow:vertical
 
 QScrollBar::down-arrow:vertical
 {
-    background-image: url("C:/Users/User/Google Drive/python27/mypytools/python/cell_compare/core/gui/themes/down_arrow.png");
-    width: 16px;
-    height: 16px;
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_vertical_down_arrow.png");
+    width: 10px;
+    height: 10px;
     position: center;
 }
 

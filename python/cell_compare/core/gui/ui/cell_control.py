@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\User\Google Drive\python27\mypytools\python\cell_compare\core\gui\ui\cell_control.ui'
+# Form implementation generated from reading ui file 'E:\Work\GitHub\mypytools\python\cell_compare\core\gui\ui\cell_control.ui'
 #
-# Created: Mon Apr 13 23:12:43 2015
+# Created: Thu Apr 23 23:57:39 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!

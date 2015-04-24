@@ -17,7 +17,7 @@ class MainWindow(QtGui.QMainWindow, Ui_compare_cell):
                 gui_dir = os.path.dirname(inspect.getfile(parent_class))
                 QtCore.QDir.setCurrent(gui_dir)
 
-        self.setStyleSheet(open('../themes/dark_pink.css').read())
+        self.setStyleSheet(open('../themes/dark/dark.css').read())
         self.setupUi(self)
 
         self.cell_controls = []
