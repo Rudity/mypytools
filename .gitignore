@@ -47,3 +47,6 @@ Temporary Items
 
 # Pycharm Project Files
 .idea
+
+# theme source files
+*.psd
