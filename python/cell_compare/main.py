@@ -7,9 +7,7 @@ import cell_compare.core.gui.main_window
 
 def main():
     app = QtGui.QApplication(sys.argv)
-    # css_file = open('../themes/dark_pink.css').read()
     cc = cell_compare.core.gui.main_window.MainWindow()
-    # cc.setStyleSheet(css_file)
     cc.show()
     sys.exit(app.exec_())
 
