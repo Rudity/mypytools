@@ -77,7 +77,7 @@
        <item>
         <widget class="QComboBox" name="sheet_combobox">
          <property name="enabled">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>

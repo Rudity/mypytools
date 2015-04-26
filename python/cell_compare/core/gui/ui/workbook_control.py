@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'E:\Work\GitHub\mypytools\python\cell_compare\core\gui\ui\workbook_control.ui'
 #
-# Created: Thu Apr 23 23:57:39 2015
+# Created: Sat Apr 25 18:09:16 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -56,7 +56,7 @@ class Ui_workbook(object):
         self.load_workbook.setObjectName(_fromUtf8("load_workbook"))
         self.a_horizontalLayout.addWidget(self.load_workbook)
         self.sheet_combobox = QtGui.QComboBox(workbook)
-        self.sheet_combobox.setEnabled(True)
+        self.sheet_combobox.setEnabled(False)
         self.sheet_combobox.setObjectName(_fromUtf8("sheet_combobox"))
         self.a_horizontalLayout.addWidget(self.sheet_combobox)
         self.verticalLayout.addLayout(self.a_horizontalLayout)

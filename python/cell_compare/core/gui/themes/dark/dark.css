@@ -1,15 +1,22 @@
 /*
-#CC00CC - Pink select color
-#232323 - Background color scroll area
-#323232 - Background color
-#3C3C3C - widget color
+        #007ACC - Pink select color  #007ACC 
+Blue Theme color:
+#007ACC - Main
+#007ACC - Hover
+#004B7E - Pressed
+
+#232323 - Background color scroll area /pulldown menu bg color
+#323232 - Background color (base)
+#444444 - Disabled color
+#3C3C3C - widget color (Buttons etc)
 #7C7C7C - hover color
 #505050 - border color/select
 #7C7C7C - scroll color
 #969696 - scroll hover
 #C5C5C5 - scroll select
-#B1B1B1 - text color
+#B1B1B1 - text color - not using so far
 #000000 - black
+#FFFFFF - white
 
 */
 
@@ -31,7 +38,7 @@ QWidget#scrollAreaWidgetContents
 Custom named stuff above:
 */
 
-QSpinBox
+QAbstractSpinBox
 {
     background-color: #3C3C3C;
     border: 1px;
@@ -39,32 +46,85 @@ QSpinBox
     border-color: #505050;
 }
 
-QSpinBox::up-button
+QAbstractSpinBox::disabled
 {
-
-    /*background-color: #3C3C3C;
+    background-color: #444444;
     border: 1px;
     border-style: solid;
-    border-color: #505050;
-    */
-
+    border-color: #444444;
 }
 
-/*
+
+QAbstractSpinBox::up-button, QAbstractSpinBox::down-button
+{
+
+    background-color: #3C3C3C;
+    border: 0px;
+}
+
+QAbstractSpinBox::up-button:disabled, QAbstractSpinBox::down-button:disabled
+{
+
+    background-color: #444444;
+    border: 0px;
+}
+
 QAbstractSpinBox::up-arrow
 {
-    background-image: url(:/down_arrow.png);
-    width: 3px;
-    height: 3px;
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/cb_up_arrow.png");
+    width: 5px;
+    height: 5px;
 }
-*/
 
-QSpinBox::up-arrow
+QAbstractSpinBox::up-arrow:hover
 {
-    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_vertical_down_arrow.png");
-    width: 3px;
-    height: 3px;
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/cb_up_arrow_hover.png");
+    width: 5px;
+    height: 5px;
 }
+
+QAbstractSpinBox::up-arrow:pressed
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/cb_up_arrow_pressed.png");
+    width: 5px;
+    height: 5px;
+}
+
+QAbstractSpinBox::up-arrow:disabled
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/cb_up_arrow_disabled.png");
+    width: 5px;
+    height: 5px;
+}
+
+QAbstractSpinBox::down-arrow
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/cb_down_arrow.png");
+    width: 5px;
+    height: 5px;
+}
+
+QAbstractSpinBox::down-arrow:hover
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/cb_down_arrow_hover.png");
+    width: 5px;
+    height: 5px;
+}
+
+QAbstractSpinBox::down-arrow:pressed
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/cb_down_arrow_pressed.png");
+    width: 5px;
+    height: 5px;
+}
+
+QAbstractSpinBox::down-arrow:disabled
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/cb_down_arrow_disabled.png");
+    width: 5px;
+    height: 5px;
+}
+
 
 QToolTip
 {
@@ -75,10 +135,9 @@ QToolTip
     opacity: 100;
 }
 
-
 QWidget
 {
-    color: #B1B1B1;
+    color: #FFFFFF;
     background-color: #3C3C3C;
 }
 
@@ -92,7 +151,6 @@ QWidget:item:selected
 {
     background-color: #505050;
 }
-
 
 QMenuBar::item
 {
@@ -138,7 +196,7 @@ QAbstractItemView
 
 QWidget:focus
 {
-    /*border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #CC00CC, stop: 1 #CC00CC);*/
+    /*border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #007ACC, stop: 1 #007ACC);*/
 }
 
 QLineEdit
@@ -157,16 +215,6 @@ QPushButton
     border-width: 1px;
     border-style: solid;
     border-color: #505050;
-    /*
-    border-width: 1px;
-    border-color: #7C7C7C;
-    border-style: solid;
-    border-radius: 0;
-    padding: 0px;
-
-    padding-left: 5px;
-    padding-right: 5px;
-    */
 }
 
 QPushButton:hover
@@ -176,12 +224,16 @@ QPushButton:hover
 
 QPushButton:pressed
 {
-    background-color: #CC00CC;
+    background-color: #007ACC;
 }
 
 QComboBox
 {
     background-color: #3C3C3C;
+    image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/qb_down_arrow.png");
+    image-position: right;
+    padding-right: 4px;
+    padding-left: 4px;
     border-style: solid;
     border: 1px solid #505050;
 }
@@ -189,86 +241,148 @@ QComboBox
 QComboBox:hover
 {
     background-color: #7C7C7C;
+    image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/qb_down_arrow_hover.png");
+    image-position: right;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+QComboBox:disabled
+{
+    background-color: #444444;
+    border: 0px;
+    image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/qb_down_arrow_disabled.png");
+    image-position: right;
+    padding-right: 4px;
+    padding-left: 4px;
 }
 
 
 QComboBox:on
 {
-    padding-top: 3px;
+    background-color: #007ACC;
+    image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/qb_down_arrow.png");
+    image-position: right;
     padding-left: 4px;
-    background-color: #232323;
+    padding-right: 4px;
 }
+
 
 QComboBox QAbstractItemView
 {
+    background-color: #232323;
     border: 1px #505050;
     selection-background-color: #7C7C7C;
 }
+
 
 QComboBox::drop-down
 {
     subcontrol-origin: padding;
     subcontrol-position: top right;
-    width: 15px;
+    width: 10px;
 
     border-left-width: 0px;
-    border-left-color: #232323;
-    border-left-style: solid; /* just a single line */
- }
-
-QComboBox::down-arrow
-{
-    image: url(:/down_arrow.png);
 }
 
 QGroupBox:focus
 {
-    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #CC00CC, stop: 1 #CC00CC);
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #007ACC, stop: 1 #007ACC);
 }
 
 QTextEdit:focus
 {
-    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #CC00CC, stop: 1 #CC00CC);
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #007ACC, stop: 1 #007ACC);
 }
 
-QScrollBar:horizontal {
-     border: 1px solid #222222;
-     background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0.0 #121212, stop: 0.2 #282828, stop: 1 #484848);
-     height: 7px;
-     margin: 0px 16px 0 16px;
+QScrollBar:horizontal
+{
+    background: #323232;
+    height: 18px;
+    margin: 0px 16px 0px 16px;
 }
 
 QScrollBar::handle:horizontal
 {
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #CC00CC, stop: 0.5 #CC00CC, stop: 1 #CC00CC);
-      min-height: 20px;
-      border-radius: 2px;
+    background: #7C7C7C;
+    margin: 5px 0px 5px 0px
 }
 
-QScrollBar::add-line:horizontal {
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #CC00CC, stop: 1 #CC00CC);
-      width: 14px;
-      subcontrol-position: right;
-      subcontrol-origin: margin;
-}
-
-QScrollBar::sub-line:horizontal {
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #CC00CC, stop: 1 #CC00CC);
-      width: 14px;
-     subcontrol-position: left;
-     subcontrol-origin: margin;
-}
-
-QScrollBar::right-arrow:horizontal, QScrollBar::left-arrow:horizontal
+QScrollBar::handle:horizontal:hover
 {
-      border: 1px solid black;
-      width: 1px;
-      height: 1px;
-      background: white;
+    background: #969696;
+    margin: 5px 0px 5px 0px
+}
+
+QScrollBar::handle:horizontal:pressed
+{
+    background: #C5C5C5;
+    margin: 5px 0px 5px 0px
+}
+
+
+QScrollBar::add-line:horizontal
+{
+    background: #323232;
+    width: 16px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal
+{
+    background: #323232;
+    width: 16px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::left-arrow:horizontal
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_horizontal_left_arrow.png");
+    width: 10px;
+    height: 10px;
+    position: center;
+}
+
+QScrollBar::left-arrow:horizontal:hover
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_horizontal_left_arrow_hover.png");
+    width: 10px;
+    height: 10px;
+    position: center;
+}
+
+QScrollBar::left-arrow:horizontal:pressed
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_horizontal_left_arrow_pressed.png");
+    width: 10px;
+    height: 10px;
+    position: center;
+}
+
+QScrollBar::right-arrow:horizontal
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_horizontal_right_arrow.png");
+    width: 10px;
+    height: 10px;
+    position: center;
+}
+
+QScrollBar::right-arrow:horizontal:hover
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_horizontal_right_arrow_hover.png");
+    width: 10px;
+    height: 10px;
+    position: center;
+}
+
+QScrollBar::right-arrow:horizontal:pressed
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_horizontal_right_arrow_pressed.png");
+    width: 10px;
+    height: 10px;
+    position: center;
 }
 
 QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
@@ -281,29 +395,24 @@ QScrollBar:vertical
     background: #323232;
     width: 18px;
     margin: 16px 0 16px 0;
-        /*
-      background: #7C7C7C;
-      width: 16px;
-      margin: 16px 0 16px 0;
-      */
 }
 
 QScrollBar::handle:vertical
 {
     background: #7C7C7C;
-    margin: 0px 5px 0px 4px
+    margin: 0px 5px 0px 5px
 }
 
 QScrollBar::handle:vertical:hover
 {
     background: #969696;
-    margin: 0px 4px 0px 4px
+    margin: 0px 5px 0px 5px
 }
 
 QScrollBar::handle:vertical:pressed
 {
     background: #C5C5C5;
-    margin: 0px 4px 0px 4px
+    margin: 0px 5px 0px 5px
 }
 
 QScrollBar::add-line:vertical
@@ -322,15 +431,6 @@ QScrollBar::sub-line:vertical
     subcontrol-origin: margin;
 }
 
-QScrollBar::up-arrow:vertical
-{
-    /*
-    background: #7C7C7C;
-
-    background-image: url(:/down_arrow.png);
-    */
-}
-
 QScrollBar::down-arrow:vertical
 {
     background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_vertical_down_arrow.png");
@@ -339,22 +439,44 @@ QScrollBar::down-arrow:vertical
     position: center;
 }
 
-QScrollBar::up-arrow:vertical:hover, QScrollBar::down-arrow:vertical:hover
+QScrollBar::down-arrow:vertical:hover
 {
-    width: 6px;
-    height: 6px;
-    background: #969696;
-    border: none;
-    background-image: url(arr_up.png);
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_vertical_down_arrow_hover.png");
+    width: 10px;
+    height: 10px;
+    position: center;
 }
 
-QScrollBar::up-arrow:vertical:pressed, QScrollBar::down-arrow:vertical:pressed
+QScrollBar::down-arrow:vertical:pressed
 {
-    width: 6px;
-    height: 6px;
-    background: #C5C5C5;
-    border: none;
-    background-image: url(arr_up.png);
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_vertical_down_arrow_pressed.png");
+    width: 10px;
+    height: 10px;
+    position: center;
+}
+
+QScrollBar::up-arrow:vertical
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_vertical_up_arrow.png");
+    width: 10px;
+    height: 10px;
+    position: center;
+}
+
+QScrollBar::up-arrow:vertical:hover
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_vertical_up_arrow_hover.png");
+    width: 10px;
+    height: 10px;
+    position: center;
+}
+
+QScrollBar::up-arrow:vertical:pressed
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_vertical_up_arrow_pressed.png");
+    width: 10px;
+    height: 10px;
+    position: center;
 }
 
 QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
@@ -421,10 +543,10 @@ QMainWindow::separator
 QMainWindow::separator:hover
 {
 
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #CC00CC, stop:0.5 #b56c17 stop:1 #CC00CC);
+    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #007ACC, stop:0.5 #b56c17 stop:1 #007ACC);
     color: white;
     padding-left: 4px;
-    border: 1px solid #CC00CC;
+    border: 1px solid #007ACC;
     spacing: 3px; /* spacing between items in the tool bar */
 }
 
@@ -453,7 +575,7 @@ QProgressBar
 
 QProgressBar::chunk
 {
-    background-color: #CC00CC;
+    background-color: #007ACC;
     width: 2.15px;
     margin: 0.5px;
 }

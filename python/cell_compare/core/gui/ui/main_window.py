@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'E:\Work\GitHub\mypytools\python\cell_compare\core\gui\ui\main_window.ui'
 #
-# Created: Thu Apr 23 23:57:39 2015
+# Created: Sat Apr 25 18:09:16 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -63,11 +63,12 @@ class Ui_compare_cell(object):
         self.scrollArea.setFrameShadow(QtGui.QFrame.Plain)
         self.scrollArea.setLineWidth(1)
         self.scrollArea.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOn)
+        self.scrollArea.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOn)
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.scrollArea.setObjectName(_fromUtf8("scrollArea"))
         self.scrollAreaWidgetContents = QtGui.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 615, 529))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 615, 512))
         self.scrollAreaWidgetContents.setObjectName(_fromUtf8("scrollAreaWidgetContents"))
         self.scroll_vertical_layout = QtGui.QVBoxLayout(self.scrollAreaWidgetContents)
         self.scroll_vertical_layout.setSpacing(10)

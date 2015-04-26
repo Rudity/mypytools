@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'E:\Work\GitHub\mypytools\python\cell_compare\core\gui\ui\cell_control.ui'
 #
-# Created: Thu Apr 23 23:57:39 2015
+# Created: Sat Apr 25 18:09:16 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
