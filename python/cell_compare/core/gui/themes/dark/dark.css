@@ -8,6 +8,7 @@ Blue Theme color:
 #232323 - Background color scroll area /pulldown menu bg color
 #323232 - Background color (base)
 #444444 - Disabled color
+#4A4A4A - Disabled text
 #3C3C3C - widget color (Buttons etc)
 #7C7C7C - hover color
 #505050 - border color/select
@@ -23,6 +24,8 @@ Blue Theme color:
 /*
 Custom named stuff below:
 */
+
+/*
 QFrame#custom_name_frame, QFrame#scrollArea
 {
     border: 1px;
@@ -37,6 +40,121 @@ QWidget#scrollAreaWidgetContents
 /*
 Custom named stuff above:
 */
+
+QWidget
+{
+    color: #FFFFFF;
+    background-color: #3C3C3C;
+}
+
+QWidget:item:hover
+{
+    background-color: #7C7C7C;
+    color: #000000;
+}
+
+QWidget:item:selected
+{
+    background-color: #505050;
+}
+
+QWidget:focus
+{
+    /*border: 1px solid #007ACC;*/
+}
+
+QWidget:disabled
+{
+    color: #4A4A4A;
+    background-color: #444444;
+    border: 1px;
+    border-style: solid;
+    border-color: #444444;
+}
+
+QFrame
+{
+    border: 1px;
+    border-style: solid;
+    border-color: #505050;
+    margin-top: 1ex;
+}
+
+QLabel
+{
+    border: 0px;
+}
+
+
+QGroupBox
+{
+    border: 1px;
+    border-style: solid;
+    border-color: #505050;
+    margin-top: 10;
+}
+
+QGroupBox::title
+{
+    background-color: transparent;
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 2 10px;
+}
+
+QGroupBox::indicator
+{
+    background-color: #3C3C3C;
+    border: 1px solid #505050;
+    width: 9px;
+    height: 9px;
+}
+
+QGroupBox::indicator:hover
+{
+    background-color: #3C3C3C;
+    border: 1px solid #007ACC;
+    width: 9px;
+    height: 9px;
+}
+
+QGroupBox::indicator:checked
+{
+    background-color: #007ACC;
+    border: 1px solid #505050;
+    width: 9px;
+    height: 9px;
+}
+
+QGroupBox::indicator:pressed
+{
+    background-color: #004B7E;
+    border: 1px solid #007ACC;
+    width: 9px;
+    height: 9px;
+}
+
+QGroupBox::indicator:checked:hover
+{
+    background-color: #007ACC;
+    border: 1px solid #007ACC;
+    width: 9px;
+    height: 9px;
+}
+
+QGroupBox::indicator:checked:pressed
+{
+    background-color: #004B7E;
+    border: 1px solid #007ACC;
+    width: 9px;
+    height: 9px;
+}
+
+QGroupBox:focus
+{
+    border: 1px solid #007ACC;
+}
+
 
 QAbstractSpinBox
 {
@@ -125,7 +243,6 @@ QAbstractSpinBox::down-arrow:disabled
     height: 5px;
 }
 
-
 QToolTip
 {
     color: #B1B1B1;
@@ -133,23 +250,6 @@ QToolTip
     border-color: #505050;
     background-color: #3C3C3C;
     opacity: 100;
-}
-
-QWidget
-{
-    color: #FFFFFF;
-    background-color: #3C3C3C;
-}
-
-QWidget:item:hover
-{
-    background-color: #7C7C7C;
-    color: #000000;
-}
-
-QWidget:item:selected
-{
-    background-color: #505050;
 }
 
 QMenuBar::item
@@ -183,20 +283,9 @@ QMenu::item:selected
     color: #000000;
 }
 
-QWidget:disabled
-{
-    color: #404040;
-    background-color: #323232;
-}
-
 QAbstractItemView
 {
     background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0.1 #646464, stop: 1 #5d5d5d);
-}
-
-QWidget:focus
-{
-    /*border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #007ACC, stop: 1 #007ACC);*/
 }
 
 QLineEdit
@@ -210,11 +299,11 @@ QLineEdit
 
 QPushButton
 {
-    color: white;
     background-color: #3C3C3C;
     border-width: 1px;
     border-style: solid;
     border-color: #505050;
+    padding: 2;
 }
 
 QPushButton:hover
@@ -223,6 +312,35 @@ QPushButton:hover
 }
 
 QPushButton:pressed
+{
+    background-color: #007ACC;
+}
+
+QPushButton:checked
+{
+    background-color: #007ACC;
+}
+
+QToolButton
+{
+    background-color: #3C3C3C;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #505050;
+    padding: 2;
+}
+
+QToolButton:hover
+{
+    background-color: #7C7C7C;
+}
+
+QToolButton:pressed
+{
+    background-color: #007ACC;
+}
+
+QToolButton:checked
 {
     background-color: #007ACC;
 }
@@ -249,8 +367,6 @@ QComboBox:hover
 
 QComboBox:disabled
 {
-    background-color: #444444;
-    border: 0px;
     image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/qb_down_arrow_disabled.png");
     image-position: right;
     padding-right: 4px;
@@ -285,14 +401,9 @@ QComboBox::drop-down
     border-left-width: 0px;
 }
 
-QGroupBox:focus
-{
-    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #007ACC, stop: 1 #007ACC);
-}
-
 QTextEdit:focus
 {
-    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #007ACC, stop: 1 #007ACC);
+    border: 1px solid #007ACC;
 }
 
 QScrollBar:horizontal
@@ -502,11 +613,6 @@ QHeaderView::section
     border: 1px solid #6c6c6c;
 }
 
-QCheckBox:disabled
-{
-color: #414141;
-}
-
 QDockWidget::title
 {
     text-align: center;
@@ -653,20 +759,64 @@ QRadioButton::indicator:checked
     );
 }
 
-QCheckBox::indicator{
-    color: #B1B1B1;
-    background-color: #323232;
-    border: 1px solid #B1B1B1;
+QCheckBox::indicator
+{
+    background-color: #3C3C3C;
+    border: 1px solid #505050;
     width: 9px;
     height: 9px;
 }
 
+QCheckBox::indicator:hover
+{
+    background-color: #3C3C3C;
+    border: 1px solid #007ACC;
+    width: 9px;
+    height: 9px;
+}
+
+QCheckBox::indicator:checked
+{
+    background-color: #007ACC;
+    border: 1px solid #505050;
+    width: 9px;
+    height: 9px;
+}
+
+QCheckBox::indicator:pressed
+{
+    background-color: #004B7E;
+    border: 1px solid #007ACC;
+    width: 9px;
+    height: 9px;
+}
+
+QCheckBox::indicator:checked:hover
+{
+    background-color: #007ACC;
+    border: 1px solid #007ACC;
+    width: 9px;
+    height: 9px;
+}
+
+QCheckBox::indicator:checked:pressed
+{
+    background-color: #004B7E;
+    border: 1px solid #007ACC;
+    width: 9px;
+    height: 9px;
+}
 QRadioButton::indicator
 {
     border-radius: 6px;
 }
 
-QRadioButton::indicator:hover, QCheckBox::indicator:hover
+QCheckBox:disabled
+{
+color: #414141;
+}
+
+QRadioButton::indicator:hover
 {
     border: 1px solid #ffaa00;
 }
@@ -676,7 +826,7 @@ QCheckBox::indicator:checked
     image:url(:/images/checkbox.png);
 }
 
-QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
+QRadioButton::indicator:disabled
 {
     border: 1px solid #444;
 }

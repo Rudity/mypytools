@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'E:\Work\GitHub\mypytools\python\theme_builder\ui\theme_tester.ui'
 #
-# Created: Sat Apr 25 19:52:57 2015
+# Created: Sat Apr 25 22:09:51 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -146,6 +146,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
         self.verticalLayout_3.addLayout(self.horizontalLayout)
         self.groupBox = QtGui.QGroupBox(self.centralwidget)
+        self.groupBox.setCheckable(True)
         self.groupBox.setObjectName(_fromUtf8("groupBox"))
         self.horizontalLayout_8 = QtGui.QHBoxLayout(self.groupBox)
         self.horizontalLayout_8.setObjectName(_fromUtf8("horizontalLayout_8"))
@@ -203,6 +204,7 @@ class Ui_MainWindow(object):
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.horizontalLayout_11.addWidget(self.label_2)
         self.pushButton_3 = QtGui.QPushButton(self.page_3)
+        self.pushButton_3.setCheckable(True)
         self.pushButton_3.setObjectName(_fromUtf8("pushButton_3"))
         self.horizontalLayout_11.addWidget(self.pushButton_3)
         self.pushButton_4 = QtGui.QPushButton(self.page_3)
@@ -211,6 +213,14 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.page_3)
         self.page_4 = QtGui.QWidget()
         self.page_4.setObjectName(_fromUtf8("page_4"))
+        self.verticalLayout_6 = QtGui.QVBoxLayout(self.page_4)
+        self.verticalLayout_6.setObjectName(_fromUtf8("verticalLayout_6"))
+        self.pushButton_5 = QtGui.QPushButton(self.page_4)
+        self.pushButton_5.setObjectName(_fromUtf8("pushButton_5"))
+        self.verticalLayout_6.addWidget(self.pushButton_5)
+        self.pushButton_6 = QtGui.QPushButton(self.page_4)
+        self.pushButton_6.setObjectName(_fromUtf8("pushButton_6"))
+        self.verticalLayout_6.addWidget(self.pushButton_6)
         self.stackedWidget.addWidget(self.page_4)
         self.verticalLayout_3.addWidget(self.stackedWidget)
         self.horizontalLayout_7 = QtGui.QHBoxLayout()
@@ -240,7 +250,7 @@ class Ui_MainWindow(object):
         self.toolBox = QtGui.QToolBox(self.centralwidget)
         self.toolBox.setObjectName(_fromUtf8("toolBox"))
         self.page = QtGui.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 266, 130))
+        self.page.setGeometry(QtCore.QRect(0, 0, 266, 116))
         self.page.setObjectName(_fromUtf8("page"))
         self.horizontalLayout_10 = QtGui.QHBoxLayout(self.page)
         self.horizontalLayout_10.setObjectName(_fromUtf8("horizontalLayout_10"))
@@ -254,7 +264,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_10.addWidget(self.columnView)
         self.toolBox.addItem(self.page, _fromUtf8(""))
         self.page_2 = QtGui.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 256, 69))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 257, 69))
         self.page_2.setObjectName(_fromUtf8("page_2"))
         self.toolBox.addItem(self.page_2, _fromUtf8(""))
         self.verticalLayout_3.addWidget(self.toolBox)
@@ -455,6 +465,8 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "StackedWidget", None))
         self.pushButton_3.setText(_translate("MainWindow", "PushButton", None))
         self.pushButton_4.setText(_translate("MainWindow", "PushButton", None))
+        self.pushButton_5.setText(_translate("MainWindow", "PushButton", None))
+        self.pushButton_6.setText(_translate("MainWindow", "PushButton", None))
         self.label_8.setText(_translate("MainWindow", "QGraphicsView", None))
         self.label.setText(_translate("MainWindow", "ColumnView", None))
         self.toolBox.setItemText(self.toolBox.indexOf(self.page), _translate("MainWindow", "Page 1 - toolBox", None))
