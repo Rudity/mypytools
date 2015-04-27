@@ -25,18 +25,16 @@ Blue Theme color:
 Custom named stuff below:
 */
 
-/*
-QFrame#custom_name_frame, QFrame#scrollArea
-{
-    border: 1px;
-    border-style: solid;
-    border-color: #505050;
-}
-
 QWidget#scrollAreaWidgetContents
 {
     background-color: #232323;
 }
+
+QScrollArea#scrollArea
+{
+    background-color: #323232;
+}
+
 /*
 Custom named stuff above:
 */
@@ -60,7 +58,7 @@ QWidget:item:selected
 
 QWidget:focus
 {
-    /*border: 1px solid #007ACC;*/
+    border: 1px solid #007ACC;
 }
 
 QWidget:disabled
@@ -83,6 +81,7 @@ QFrame
 QLabel
 {
     border: 0px;
+    background-color: transparent;
 }
 
 
@@ -245,11 +244,11 @@ QAbstractSpinBox::down-arrow:disabled
 
 QToolTip
 {
-    color: #B1B1B1;
+    color: white;
     border: 1px;
+    border-style: solid;
     border-color: #505050;
-    background-color: #3C3C3C;
-    opacity: 100;
+    background-color: #007ACC;
 }
 
 QMenuBar::item
@@ -290,11 +289,10 @@ QAbstractItemView
 
 QLineEdit
 {
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0 #646464, stop: 1 #5d5d5d);
+    background-color: #3C3C3C;
     padding: 1px;
     border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
+    border: 1px solid #505050;
 }
 
 QPushButton
@@ -350,8 +348,7 @@ QComboBox
     background-color: #3C3C3C;
     image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/qb_down_arrow.png");
     image-position: right;
-    padding-right: 4px;
-    padding-left: 4px;
+    padding: 2px 4px 2px 4px;
     border-style: solid;
     border: 1px solid #505050;
 }
@@ -361,16 +358,14 @@ QComboBox:hover
     background-color: #7C7C7C;
     image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/qb_down_arrow_hover.png");
     image-position: right;
-    padding-right: 4px;
-    padding-left: 4px;
+    padding: 2px 4px 2px 4px;
 }
 
 QComboBox:disabled
 {
     image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/qb_down_arrow_disabled.png");
     image-position: right;
-    padding-right: 4px;
-    padding-left: 4px;
+    padding: 2px 4px 2px 4px;
 }
 
 
@@ -379,8 +374,7 @@ QComboBox:on
     background-color: #007ACC;
     image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/qb_down_arrow.png");
     image-position: right;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding: 2px 4px 2px 4px;
 }
 
 
@@ -397,13 +391,7 @@ QComboBox::drop-down
     subcontrol-origin: padding;
     subcontrol-position: top right;
     width: 10px;
-
     border-left-width: 0px;
-}
-
-QTextEdit:focus
-{
-    border: 1px solid #007ACC;
 }
 
 QScrollBar:horizontal
@@ -431,6 +419,11 @@ QScrollBar::handle:horizontal:pressed
     margin: 5px 0px 5px 0px
 }
 
+QScrollBar::handle:horizontal:disabled
+{
+    background: transparent;
+    margin: 5px 0px 5px 0px
+}
 
 QScrollBar::add-line:horizontal
 {
@@ -472,6 +465,14 @@ QScrollBar::left-arrow:horizontal:pressed
     position: center;
 }
 
+QScrollBar::left-arrow:horizontal:disabled
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_horizontal_left_arrow_disabled.png");
+    width: 10px;
+    height: 10px;
+    position: center;
+}
+
 QScrollBar::right-arrow:horizontal
 {
     background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_horizontal_right_arrow.png");
@@ -491,6 +492,14 @@ QScrollBar::right-arrow:horizontal:hover
 QScrollBar::right-arrow:horizontal:pressed
 {
     background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_horizontal_right_arrow_pressed.png");
+    width: 10px;
+    height: 10px;
+    position: center;
+}
+
+QScrollBar::right-arrow:horizontal:disabled
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_horizontal_right_arrow_disabled.png");
     width: 10px;
     height: 10px;
     position: center;
@@ -526,6 +535,12 @@ QScrollBar::handle:vertical:pressed
     margin: 0px 5px 0px 5px
 }
 
+QScrollBar::handle:vertical:disabled
+{
+    background: transparent;
+    margin: 0px 5px 0px 5px
+}
+
 QScrollBar::add-line:vertical
 {
     background: #323232;
@@ -558,9 +573,9 @@ QScrollBar::down-arrow:vertical:hover
     position: center;
 }
 
-QScrollBar::down-arrow:vertical:pressed
+QScrollBar::down-arrow:vertical:disabled
 {
-    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_vertical_down_arrow_pressed.png");
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_vertical_down_arrow_disabled.png");
     width: 10px;
     height: 10px;
     position: center;
@@ -590,19 +605,17 @@ QScrollBar::up-arrow:vertical:pressed
     position: center;
 }
 
+QScrollBar::up-arrow:vertical:disabled
+{
+    background-image: url("E:/Work/GitHub/mypytools/python/cell_compare/core/gui/themes/dark/images/sb_vertical_up_arrow_disabled.png");
+    width: 10px;
+    height: 10px;
+    position: center;
+}
+
 QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
 {
     background: none;
-}
-
-QTextEdit
-{
-    background-color: #242424;
-}
-
-QPlainTextEdit
-{
-    background-color: #242424;
 }
 
 QHeaderView::section
@@ -639,28 +652,27 @@ QDockWidget::close-button:pressed, QDockWidget::float-button:pressed
 
 QMainWindow::separator
 {
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #161616, stop: 0.5 #151515, stop: 0.6 #212121, stop:1 #343434);
-    color: white;
+    color: #505050;
     padding-left: 4px;
-    border: 1px solid #4c4c4c;
-    spacing: 3px; /* spacing between items in the tool bar */
+    border: 1px solid #505050;
+    spacing: 3px;
 }
 
 QMainWindow::separator:hover
 {
 
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #007ACC, stop:0.5 #b56c17 stop:1 #007ACC);
+    background-color: #007ACC;
     color: white;
     padding-left: 4px;
-    border: 1px solid #007ACC;
-    spacing: 3px; /* spacing between items in the tool bar */
+    border: 1px solid #505050;
+    spacing: 3px;
 }
 
 QToolBar::handle
 {
-     spacing: 3px; /* spacing between items in the tool bar */
-     background: url(:/images/handle.png);
+     spacing: 3px;
 }
+
 
 QMenu::separator
 {
@@ -674,8 +686,7 @@ QMenu::separator
 
 QProgressBar
 {
-    border: 2px solid grey;
-    border-radius: 5px;
+    border: 1px solid #505050;
     text-align: center;
 }
 
@@ -734,29 +745,23 @@ QTabBar::tab:selected
 
 QTabBar::tab:!selected:hover
 {
-    /*border-top: 2px solid #ffaa00;
+    /*border-top: 2px solid #007ACC;
     padding-bottom: 3px;*/
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:0.4 #343434, stop:0.2 #343434, stop:0.1 #ffaa00);
+    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:0.4 #343434, stop:0.2 #343434, stop:0.1 #007ACC);
 }
 
-QRadioButton::indicator:checked, QRadioButton::indicator:unchecked{
-    color: #B1B1B1;
-    background-color: #323232;
-    border: 1px solid #B1B1B1;
-    border-radius: 6px;
-}
-
-QRadioButton::indicator:checked
+QCheckBox:disabled
 {
-    background-color: qradialgradient(
-        cx: 0.5, cy: 0.5,
-        fx: 0.5, fy: 0.5,
-        radius: 1.0,
-        stop: 0.25 #ffaa00,
-        stop: 0.3 #323232
-    );
+    background-color: transparent;
+    border: 0px;
+}
+
+QCheckBox:focus
+{
+    background-color: transparent;
+    border: 0px;
 }
 
 QCheckBox::indicator
@@ -791,6 +796,14 @@ QCheckBox::indicator:pressed
     height: 9px;
 }
 
+QCheckBox::indicator:disabled
+{
+    background-color: transparent;
+    border: 1px solid #4A4A4A;
+    width: 9px;
+    height: 9px;
+}
+
 QCheckBox::indicator:checked:hover
 {
     background-color: #007ACC;
@@ -806,27 +819,87 @@ QCheckBox::indicator:checked:pressed
     width: 9px;
     height: 9px;
 }
-QRadioButton::indicator
+
+QRadioButton:focus
 {
-    border-radius: 6px;
+    background-color: transparent;
+    border: 0px;
 }
 
-QCheckBox:disabled
+QRadioButton:disabled
 {
-color: #414141;
+    background-color: transparent;
+    border: 0px;
+}
+
+QRadioButton::indicator
+{
+    background-color: #3C3C3C;
+    border: 1px solid #505050;
+    border-radius: 6px;
 }
 
 QRadioButton::indicator:hover
 {
-    border: 1px solid #ffaa00;
+    background-color: #3C3C3C;
+    border: 1px solid #007ACC;
+    border-radius: 6px;
 }
 
-QCheckBox::indicator:checked
+QRadioButton::indicator:checked
 {
-    image:url(:/images/checkbox.png);
+    background-color: #007ACC;
+    border: 1px solid #505050;
+    border-radius: 6px;
+}
+
+QRadioButton::indicator:pressed
+{
+    background-color: #004B7E;
+    border: 1px solid #007ACC;
+    border-radius: 6px;
 }
 
 QRadioButton::indicator:disabled
 {
-    border: 1px solid #444;
+    background-color: transparent;
+    border: 1px solid #4A4A4A;
+    border-radius: 6px;
+}
+
+QRadioButton::indicator:checked:hover
+{
+    background-color: #007ACC;
+    border: 1px solid #007ACC;
+    border-radius: 6px;
+}
+
+QRadioButton::indicator:checked:pressed
+{
+    background-color: #004B7E;
+    border: 1px solid #007ACC;
+    border-radius: 6px;
+}
+
+QToolBox::tab
+{
+    border: 1px solid #505050;
+}
+
+QToolBox::tab:hover
+{
+    border: 1px solid #007ACC;
+}
+
+QToolBox::tab:selected
+{
+    border: 1px solid #505050;
+    font: italic;
+}
+
+QToolBox::tab:selected:hover
+{
+    border: 1px solid #505050;
+    font: italic;
+    color: #007ACC;
 }

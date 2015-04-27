@@ -22,6 +22,10 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 
         self.setupUi(self)
 
+        self.toolBar.addWidget(QtGui.QPushButton())
+        self.toolBar.addWidget(QtGui.QPushButton())
+        self.toolBar.addWidget(QtGui.QPushButton())
+
 
 def main():
     app = QtGui.QApplication(sys.argv)

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'E:\Work\GitHub\mypytools\python\cell_compare\core\gui\ui\main_window.ui'
 #
-# Created: Sat Apr 25 20:28:46 2015
+# Created: Sun Apr 26 17:40:49 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -58,6 +58,7 @@ class Ui_compare_cell(object):
         self.horizontalLayout.addWidget(self.add_cell_control_button)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
         self.scrollArea = QtGui.QScrollArea(self.centralwidget)
+        self.scrollArea.setFocusPolicy(QtCore.Qt.NoFocus)
         self.scrollArea.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
         self.scrollArea.setFrameShape(QtGui.QFrame.Box)
         self.scrollArea.setFrameShadow(QtGui.QFrame.Plain)

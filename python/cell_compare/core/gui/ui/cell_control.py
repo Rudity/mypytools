@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'E:\Work\GitHub\mypytools\python\cell_compare\core\gui\ui\cell_control.ui'
 #
-# Created: Sat Apr 25 20:28:46 2015
+# Created: Sun Apr 26 17:40:49 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -33,12 +33,14 @@ class Ui_cell_control(object):
         sizePolicy.setHeightForWidth(cell_control.sizePolicy().hasHeightForWidth())
         cell_control.setSizePolicy(sizePolicy)
         cell_control.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        cell_control.setFocusPolicy(QtCore.Qt.NoFocus)
         cell_control.setAutoFillBackground(False)
         self.verticalLayout_2 = QtGui.QVBoxLayout(cell_control)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setMargin(0)
         self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
         self.custom_name_frame = QtGui.QFrame(cell_control)
+        self.custom_name_frame.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.custom_name_frame.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
         self.custom_name_frame.setFrameShape(QtGui.QFrame.Box)
         self.custom_name_frame.setObjectName(_fromUtf8("custom_name_frame"))
@@ -46,6 +48,8 @@ class Ui_cell_control(object):
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 4)
         self.verticalLayout_3.setObjectName(_fromUtf8("verticalLayout_3"))
+        self.horizontalLayout = QtGui.QHBoxLayout()
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
         self.custom_title_label = QtGui.QLabel(self.custom_name_frame)
         self.custom_title_label.setCursor(QtGui.QCursor(QtCore.Qt.IBeamCursor))
         self.custom_title_label.setFocusPolicy(QtCore.Qt.ClickFocus)
@@ -56,7 +60,10 @@ class Ui_cell_control(object):
         self.custom_title_label.setOpenExternalLinks(False)
         self.custom_title_label.setTextInteractionFlags(QtCore.Qt.TextEditorInteraction)
         self.custom_title_label.setObjectName(_fromUtf8("custom_title_label"))
-        self.verticalLayout_3.addWidget(self.custom_title_label)
+        self.horizontalLayout.addWidget(self.custom_title_label)
+        spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        self.verticalLayout_3.addLayout(self.horizontalLayout)
         self.controls_horizontalLayout = QtGui.QHBoxLayout()
         self.controls_horizontalLayout.setObjectName(_fromUtf8("controls_horizontalLayout"))
         self.cell_match_icon = QtGui.QLabel(self.custom_name_frame)

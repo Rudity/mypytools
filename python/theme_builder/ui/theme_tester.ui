@@ -243,6 +243,15 @@ p, li { white-space: pre-wrap; }
         <layout class="QHBoxLayout" name="horizontalLayout_8">
          <item>
           <widget class="QPushButton" name="pushButton">
+           <property name="toolTip">
+            <string>This is the toolTip</string>
+           </property>
+           <property name="statusTip">
+            <string>This is the statusTip</string>
+           </property>
+           <property name="whatsThis">
+            <string>This is whatsThis</string>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
@@ -295,6 +304,16 @@ p, li { white-space: pre-wrap; }
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_9">
          <item>
+          <widget class="QRadioButton" name="radioButton_3">
+           <property name="whatsThis">
+            <string>This is whatsThis</string>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QRadioButton" name="radioButton_2">
            <property name="text">
             <string>RadioButton</string>
@@ -318,6 +337,9 @@ p, li { white-space: pre-wrap; }
        <layout class="QHBoxLayout" name="horizontalLayout_5">
         <item>
          <widget class="QToolButton" name="toolButton_2">
+          <property name="statusTip">
+           <string>This is a statusTip</string>
+          </property>
           <property name="text">
            <string>QToolButton</string>
           </property>
@@ -444,7 +466,7 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>266</width>
+           <width>278</width>
            <height>116</height>
           </rect>
          </property>
@@ -476,7 +498,7 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>257</width>
+           <width>278</width>
            <height>69</height>
           </rect>
          </property>
@@ -759,6 +781,9 @@ p, li { white-space: pre-wrap; }
    </attribute>
   </widget>
   <widget class="QDockWidget" name="dockWidget">
+   <property name="windowTitle">
+    <string>dockWidget</string>
+   </property>
    <attribute name="dockWidgetArea">
     <number>4</number>
    </attribute>

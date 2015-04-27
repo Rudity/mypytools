@@ -101,7 +101,7 @@
        <item>
         <widget class="QSpinBox" name="row_spinBox">
          <property name="enabled">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -133,7 +133,7 @@
        <item>
         <widget class="QSpinBoxExcelColumnTitle" name="column_spinBox">
          <property name="enabled">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">

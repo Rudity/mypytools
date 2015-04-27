@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'E:\Work\GitHub\mypytools\python\theme_builder\ui\theme_tester.ui'
 #
-# Created: Sat Apr 25 22:09:51 2015
+# Created: Sun Apr 26 18:28:37 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -175,6 +175,9 @@ class Ui_MainWindow(object):
         self.frame.setObjectName(_fromUtf8("frame"))
         self.horizontalLayout_9 = QtGui.QHBoxLayout(self.frame)
         self.horizontalLayout_9.setObjectName(_fromUtf8("horizontalLayout_9"))
+        self.radioButton_3 = QtGui.QRadioButton(self.frame)
+        self.radioButton_3.setObjectName(_fromUtf8("radioButton_3"))
+        self.horizontalLayout_9.addWidget(self.radioButton_3)
         self.radioButton_2 = QtGui.QRadioButton(self.frame)
         self.radioButton_2.setObjectName(_fromUtf8("radioButton_2"))
         self.horizontalLayout_9.addWidget(self.radioButton_2)
@@ -250,7 +253,7 @@ class Ui_MainWindow(object):
         self.toolBox = QtGui.QToolBox(self.centralwidget)
         self.toolBox.setObjectName(_fromUtf8("toolBox"))
         self.page = QtGui.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 266, 116))
+        self.page.setGeometry(QtCore.QRect(0, 0, 278, 116))
         self.page.setObjectName(_fromUtf8("page"))
         self.horizontalLayout_10 = QtGui.QHBoxLayout(self.page)
         self.horizontalLayout_10.setObjectName(_fromUtf8("horizontalLayout_10"))
@@ -264,7 +267,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_10.addWidget(self.columnView)
         self.toolBox.addItem(self.page, _fromUtf8(""))
         self.page_2 = QtGui.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 257, 69))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 278, 69))
         self.page_2.setObjectName(_fromUtf8("page_2"))
         self.toolBox.addItem(self.page_2, _fromUtf8(""))
         self.verticalLayout_3.addWidget(self.toolBox)
@@ -454,12 +457,18 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Tab 1", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Tab 2", None))
         self.groupBox.setTitle(_translate("MainWindow", "GroupBox", None))
+        self.pushButton.setToolTip(_translate("MainWindow", "This is the toolTip", None))
+        self.pushButton.setStatusTip(_translate("MainWindow", "This is the statusTip", None))
+        self.pushButton.setWhatsThis(_translate("MainWindow", "This is whatsThis", None))
         self.pushButton.setText(_translate("MainWindow", "PushButton", None))
         self.pushButton_2.setText(_translate("MainWindow", "PushButton", None))
         self.checkBox_2.setText(_translate("MainWindow", "CheckBox", None))
         self.checkBox.setText(_translate("MainWindow", "CheckBox", None))
+        self.radioButton_3.setWhatsThis(_translate("MainWindow", "This is whatsThis", None))
+        self.radioButton_3.setText(_translate("MainWindow", "RadioButton", None))
         self.radioButton_2.setText(_translate("MainWindow", "RadioButton", None))
         self.radioButton.setText(_translate("MainWindow", "RadioButton", None))
+        self.toolButton_2.setStatusTip(_translate("MainWindow", "This is a statusTip", None))
         self.toolButton_2.setText(_translate("MainWindow", "QToolButton", None))
         self.toolButton.setText(_translate("MainWindow", "QToolButton", None))
         self.label_2.setText(_translate("MainWindow", "StackedWidget", None))
@@ -516,6 +525,7 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "TreeView", None))
         self.menuMainWindow.setTitle(_translate("MainWindow", "MainWindow", None))
         self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar", None))
+        self.dockWidget.setWindowTitle(_translate("MainWindow", "dockWidget", None))
         self.actionA.setText(_translate("MainWindow", "A", None))
         self.actionB.setText(_translate("MainWindow", "B", None))
         self.actionC.setText(_translate("MainWindow", "C", None))

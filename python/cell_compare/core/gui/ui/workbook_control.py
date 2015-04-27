@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'E:\Work\GitHub\mypytools\python\cell_compare\core\gui\ui\workbook_control.ui'
 #
-# Created: Sat Apr 25 20:28:46 2015
+# Created: Sun Apr 26 17:40:49 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -68,7 +68,7 @@ class Ui_workbook(object):
         self.row_label.setObjectName(_fromUtf8("row_label"))
         self.b_horizontalLayout.addWidget(self.row_label)
         self.row_spinBox = QtGui.QSpinBox(workbook)
-        self.row_spinBox.setEnabled(True)
+        self.row_spinBox.setEnabled(False)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -84,7 +84,7 @@ class Ui_workbook(object):
         self.column_label.setObjectName(_fromUtf8("column_label"))
         self.b_horizontalLayout.addWidget(self.column_label)
         self.column_spinBox = QSpinBoxExcelColumnTitle(workbook)
-        self.column_spinBox.setEnabled(True)
+        self.column_spinBox.setEnabled(False)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
