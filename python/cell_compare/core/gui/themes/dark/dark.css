@@ -697,9 +697,9 @@ QProgressBar::chunk
     margin: 0.5px;
 }
 
+/*
 QTabBar::tab {
-    color: #B1B1B1;
-    border: 1px solid #444;
+    border: 1px solid #505050;
     border-bottom-style: none;
     background-color: #323232;
     padding-left: 10px;
@@ -716,15 +716,13 @@ QTabWidget::pane {
 
 QTabBar::tab:last
 {
-    margin-right: 0; /* the last selected tab has nothing to overlap with on the right */
+    margin-right: 0;
     border-top-right-radius: 3px;
 }
 
 QTabBar::tab:first:!selected
 {
- margin-left: 0px; /* the last selected tab has nothing to overlap with on the right */
-
-
+    margin-left: 0px;
     border-top-left-radius: 3px;
 }
 
@@ -745,11 +743,48 @@ QTabBar::tab:selected
 
 QTabBar::tab:!selected:hover
 {
-    /*border-top: 2px solid #007ACC;
-    padding-bottom: 3px;*/
+    border-top: 2px solid #007ACC;
+    padding-bottom: 3px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:0.4 #343434, stop:0.2 #343434, stop:0.1 #007ACC);
+}
+*/
+
+QTabWidget::pane { /* The tab widget frame */
+    border-top: 1px solid #505050;
+    margin: 0px 0px 0px 0px;
+}
+
+QTabWidget::tab-bar {
+    left: 0px; /* move to the right by 5px */
+}
+
+QTabBar:focus {
+    border: 0px;
+}
+
+/* Style the tab using the tab sub-control. Note that
+    it reads QTabBar _not_ QTabWidget */
+QTabBar::tab {
+    background: transparent;
+    border: 1px solid #505050;
+    border-bottom-color: #505050; /* same as the pane color */
+    min-width: 8ex;
+    padding: 2px;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background-color: #505050;
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}
+
+QTabBar::tab:!selected {
+    margin-top: 2px; /* make non-selected tabs look smaller */
 }
 
 QCheckBox:disabled
