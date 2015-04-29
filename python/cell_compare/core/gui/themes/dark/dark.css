@@ -751,39 +751,67 @@ QTabBar::tab:!selected:hover
 }
 */
 
-QTabWidget::pane { /* The tab widget frame */
-    border-top: 1px solid #505050;
-    margin: 0px 0px 0px 0px;
+QTabWidget::pane
+{ /* The tab widget frame */
+    margin: -4px 0px 0px 0px;
 }
 
-QTabWidget::tab-bar {
+QTabWidget::tab-bar
+{
     left: 0px; /* move to the right by 5px */
 }
 
-QTabBar:focus {
+QTabBar:focus
+{
     border: 0px;
 }
 
-/* Style the tab using the tab sub-control. Note that
-    it reads QTabBar _not_ QTabWidget */
-QTabBar::tab {
+QTabBar:disabled
+{
+    border: 0px;
+    background-color: transparent;
+}
+
+QTabBar::tab:!selected:disabled
+{
+    border-color: #444444;
+}
+
+QTabBar::tab:selected:disabled
+{
+    color: #4A4A4A;
+    background-color: #444444;
+    border-color: #444444;
+}
+
+QTabBar::tab
+{
     background: transparent;
     border: 1px solid #505050;
-    border-bottom-color: #505050; /* same as the pane color */
+    border-bottom-color: #3C3C3C; /* same as the pane color */
     min-width: 8ex;
-    padding: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
-QTabBar::tab:selected, QTabBar::tab:hover {
-    background-color: #505050;
+QTabBar::tab:hover
+{
+    background-color: #7C7C7C;
 }
 
-QTabBar::tab:selected {
-    border-color: #9B9B9B;
-    border-bottom-color: #C2C7CB; /* same as pane color */
+QTabBar::tab:selected
+{
+    color: #007ACC;
+    background-color: #3C3C3C;
+    border-color: #505050;
+    border-bottom-color: #3C3C3C; /* same as pane color */
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
-QTabBar::tab:!selected {
+QTabBar::tab:!selected
+{
+    border-color: #505050;
     margin-top: 2px; /* make non-selected tabs look smaller */
 }
 

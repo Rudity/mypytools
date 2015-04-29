@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'E:\Work\GitHub\mypytools\python\theme_builder\ui\theme_tester.ui'
+# Form implementation generated from reading ui file 'E:/Work/GitHub/mypytools/python/theme_builder/ui\theme_tester.ui'
 #
-# Created: Mon Apr 27 23:05:21 2015
+# Created: Tue Apr 28 23:06:12 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -34,6 +34,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2 = QtGui.QVBoxLayout()
         self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
         self.tabWidget = QtGui.QTabWidget(self.centralwidget)
+        self.tabWidget.setEnabled(True)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -135,6 +136,9 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.verticalLayout.addWidget(self.scrollArea)
         self.tabWidget.addTab(self.tab, _fromUtf8(""))
+        self.tab_3 = QtGui.QWidget()
+        self.tab_3.setObjectName(_fromUtf8("tab_3"))
+        self.tabWidget.addTab(self.tab_3, _fromUtf8(""))
         self.tab_2 = QtGui.QWidget()
         self.tab_2.setObjectName(_fromUtf8("tab_2"))
         self.tabWidget.addTab(self.tab_2, _fromUtf8(""))
@@ -455,6 +459,7 @@ class Ui_MainWindow(object):
         self.comboBox_3.setItemText(2, _translate("MainWindow", "C", None))
         self.comboBox_3.setItemText(3, _translate("MainWindow", "D", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Tab 1", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "Page", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Tab 2", None))
         self.groupBox.setTitle(_translate("MainWindow", "GroupBox", None))
         self.pushButton.setToolTip(_translate("MainWindow", "This is the toolTip", None))
