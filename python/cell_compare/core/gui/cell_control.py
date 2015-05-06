@@ -22,15 +22,10 @@ class CellControl(QtGui.QWidget, Ui_cell_control):
     def _create_conext_menu(self):
         self.custom_name_frame.customContextMenuRequested.connect(self._on_context_menu)
         self.popMenu = QtGui.QMenu(self)
-        # self.popMenu.addAction('rename compare block', self._rename_title)
-        # self.popMenu.addSeparator()
         self.popMenu.addAction('delete compare block', self.remove_cell_control_pressed)
 
     def _on_context_menu(self, point):
         self.popMenu.exec_(self.custom_name_frame.mapToGlobal(point))
-
-    # def _rename_title(self):
-    #     self.custom_name_groupBox.setTitle('test')
 
     def _add_starting_workbook_controls(self):
         for i in range(0, self._n_workbooks):

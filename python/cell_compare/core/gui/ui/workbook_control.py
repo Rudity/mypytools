@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'E:\Work\GitHub\mypytools\python\cell_compare\core\gui\ui\workbook_control.ui'
 #
-# Created: Sun Apr 26 17:40:49 2015
+# Created: Tue May 05 22:25:12 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -35,7 +35,7 @@ class Ui_workbook(object):
         workbook.setMaximumSize(QtCore.QSize(16777215, 52))
         self.horizontalLayout = QtGui.QHBoxLayout(workbook)
         self.horizontalLayout.setSpacing(2)
-        self.horizontalLayout.setContentsMargins(4, 0, 4, 0)
+        self.horizontalLayout.setMargin(0)
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
         self.verticalLayout = QtGui.QVBoxLayout()
         self.verticalLayout.setSpacing(2)
@@ -98,6 +98,7 @@ class Ui_workbook(object):
         self.b_horizontalLayout.addWidget(self.column_spinBox)
         self.cell_value = QtGui.QLabel(workbook)
         font = QtGui.QFont()
+        font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
         self.cell_value.setFont(font)
@@ -119,8 +120,8 @@ class Ui_workbook(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.add_workbook_control.sizePolicy().hasHeightForWidth())
         self.add_workbook_control.setSizePolicy(sizePolicy)
-        self.add_workbook_control.setMinimumSize(QtCore.QSize(22, 0))
-        self.add_workbook_control.setMaximumSize(QtCore.QSize(16777215, 22))
+        self.add_workbook_control.setMinimumSize(QtCore.QSize(24, 0))
+        self.add_workbook_control.setMaximumSize(QtCore.QSize(16777215, 24))
         self.add_workbook_control.setText(_fromUtf8(""))
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(_fromUtf8("../icons/report_add.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -134,8 +135,8 @@ class Ui_workbook(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.remove_workbook_control.sizePolicy().hasHeightForWidth())
         self.remove_workbook_control.setSizePolicy(sizePolicy)
-        self.remove_workbook_control.setMinimumSize(QtCore.QSize(22, 0))
-        self.remove_workbook_control.setMaximumSize(QtCore.QSize(16777215, 22))
+        self.remove_workbook_control.setMinimumSize(QtCore.QSize(24, 0))
+        self.remove_workbook_control.setMaximumSize(QtCore.QSize(16777215, 24))
         self.remove_workbook_control.setText(_fromUtf8(""))
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap(_fromUtf8("../icons/report_delete.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -154,6 +155,7 @@ class Ui_workbook(object):
         self.row_label.setText(_translate("workbook", "Row", None))
         self.column_label.setText(_translate("workbook", "Column", None))
         self.cell_value.setText(_translate("workbook", "<Load Workbook>", None))
+        self.notes_lineedit.setToolTip(_translate("workbook", "mini notes go here", None))
 
 from cell_compare.core.gui.widgets.dropbutton import DropButton
 from cell_compare.core.gui.widgets.spinbox_excel_column_title import QSpinBoxExcelColumnTitle

@@ -51,6 +51,8 @@ QToolTip
 QStatusBar
 QSplitter TODO
 QSizeGrip TODO
+QTextEdit
+QPlainTextEdit
 */
 
 /*
@@ -1185,4 +1187,14 @@ ViewSplitter::handle
 QSizeGrip
 {
 
+}
+
+QTextEdit
+{
+    background-color: #323232;
+}
+
+QPlainTextEdit
+{
+    background-color: #323232;
 }

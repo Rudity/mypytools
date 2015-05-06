@@ -29,9 +29,8 @@ class MainWindow(QtGui.QMainWindow, Ui_compare_cell):
         self.popMenu = QtGui.QMenu(self)
         self.popMenu.addAction('add compare cell block', self.add_cell_control_pressed)
 
-        #temp code remove
-        for i in range(0, 6):
-            self.add_cell_control_pressed()
+        # add one starting cell control when created
+        self.add_cell_control_pressed()
 
     def _on_context_menu(self, point):
         self.popMenu.exec_(self.scrollArea.mapToGlobal(point))

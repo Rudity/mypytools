@@ -1,5 +1,4 @@
 import sys
-import os
 from PyQt4 import QtGui
 
 import cell_compare.core.gui.main_window
