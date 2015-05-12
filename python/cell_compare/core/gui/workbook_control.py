@@ -1,3 +1,4 @@
+import os
 from PyQt4 import QtGui, QtCore
 
 from cell_compare.core.gui.ui.workbook_control import Ui_workbook
@@ -18,6 +19,9 @@ class WorkbookControl(QtGui.QWidget, Ui_workbook):
 
         self._parent = parent
         self.workbook = None
+
+        self.file_watcher = QtCore.QFileSystemWatcher()
+        self.file_watcher.fileChanged.connect(self.file_changed)
 
         self.load_workbook.clicked.connect(self.load_workbook_pressed)
         self.load_workbook.dropped.connect(self.load_workbook_dropped)
@@ -68,6 +72,7 @@ class WorkbookControl(QtGui.QWidget, Ui_workbook):
         self.column_spinBox.setEnabled(True)
 
         self.set_cell_value()
+        self.file_watcher.addPath(file_)
 
     def set_cell_value(self):
         self.cell_value.setText(self.get_cell_value())
@@ -77,3 +82,12 @@ class WorkbookControl(QtGui.QWidget, Ui_workbook):
         return self.workbook.get_value(sheet_name=str(self.sheet_combobox.currentText()),
                                        row=self.row_spinBox.value(),
                                        column=self.column_spinBox.value())
+
+    def file_changed(self):
+        print 'file changed!'
+
+    # def watch_file(self, file_):
+    #     # paths = [os.path.dirname(os.path.realpath(file_)),
+    #     #          os.path.realpath(file_)]
+    #     # print paths
+    #     self.file_watcher.addPath(file_)
