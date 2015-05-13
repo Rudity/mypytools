@@ -1,4 +1,4 @@
-import os
+import time
 from PyQt4 import QtGui, QtCore
 
 from cell_compare.core.gui.ui.workbook_control import Ui_workbook
@@ -19,9 +19,10 @@ class WorkbookControl(QtGui.QWidget, Ui_workbook):
 
         self._parent = parent
         self.workbook = None
+        self._file = None
 
         self.file_watcher = QtCore.QFileSystemWatcher()
-        self.file_watcher.fileChanged.connect(self.file_changed)
+        self.file_watcher.fileChanged.connect(self._file_changed)
 
         self.load_workbook.clicked.connect(self.load_workbook_pressed)
         self.load_workbook.dropped.connect(self.load_workbook_dropped)
@@ -47,10 +48,12 @@ class WorkbookControl(QtGui.QWidget, Ui_workbook):
         file_diag = self.open_excel_dialog()
         if file_diag:
             self.populate_workbook_control(file_=file_diag)
+            self._file = file_diag
 
     def load_workbook_dropped(self, files_):
         if len(files_) == 1:
             self.populate_workbook_control(file_=files_[0])
+            self._file = files_[0]
 
     def populate_workbook_control(self, file_):
 
@@ -72,7 +75,9 @@ class WorkbookControl(QtGui.QWidget, Ui_workbook):
         self.column_spinBox.setEnabled(True)
 
         self.set_cell_value()
-        self.file_watcher.addPath(file_)
+
+        if file_ not in self.file_watcher.files():
+            self.file_watcher.addPath(file_)
 
     def set_cell_value(self):
         self.cell_value.setText(self.get_cell_value())
@@ -83,8 +88,19 @@ class WorkbookControl(QtGui.QWidget, Ui_workbook):
                                        row=self.row_spinBox.value(),
                                        column=self.column_spinBox.value())
 
-    def file_changed(self):
-        print 'file changed!'
+    def _file_changed(self):
+        for i in range(20):
+            try:
+                time.sleep(1.0)
+                # print i
+                self.workbook = WorkBook(file_=str(self._file))
+                self.set_cell_value()
+                # for f in self.file_watcher.files():
+                #     print f
+                break
+            except:
+                # TODO figure out how print how many times it tried to access file
+                raise
 
     # def watch_file(self, file_):
     #     # paths = [os.path.dirname(os.path.realpath(file_)),
